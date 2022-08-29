@@ -4,13 +4,11 @@ class BookingsController < ApplicationController
     # linking book to booking
     @book = Book.find(params[:book_id])
     @booking.book = @book
-    # total price dependent on rental length
-    rental_length = (@booking.rental_end - @booking.rental_start) * 86400
-    @booking.total_price = @book.price_per_day * rental_length
+    @booking.total_price = calculate_total_price(@booking)
     # add current user as renter
     @booking.user = current_user
     if @booking.save
-      # redirect_to "./views/pages/profile_page.html.erb"
+      redirect_to "/profile"
     else
       render 'books/show', status: :unprocessable_entity
     end
@@ -25,6 +23,12 @@ class BookingsController < ApplicationController
   # end
 
   private
+
+  def calculate_total_price(booking)
+    rental_length = (booking.rental_end - @booking.rental_start)
+    total_price = booking.book.price_per_day * rental_length.to_i
+    return '%.2f' % total_price.round(2)
+  end
 
   def booking_params
     params.require(:booking).permit(:rental_start, :rental_end)
