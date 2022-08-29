@@ -15,6 +15,7 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
+    @book.user = current_user
     if @book.save
       redirect_to book_path(@book)
     else
@@ -31,6 +32,11 @@ class BooksController < ApplicationController
 
   def update
     @book.update(book_params)
+    if @book.save
+      redirect_to book_path(@book)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private
@@ -40,6 +46,6 @@ class BooksController < ApplicationController
   end
 
   def book_params
-    params.require(:book).permit(:title, :blurb, :author, :genre, :location, :price_per_day)
+    params.require(:book).permit(:title, :blurb, :author, :genre, :address, :price_per_day)
   end
 end
