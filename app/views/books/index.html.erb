@@ -1,3 +1,20 @@
-<% @books.each do |book| %>
-<li><%=link_to book.title, book_path(book)%></li>
-<% end %>
+<%# <% @books.each do |book| %> 
+<%# <li><%=link_to book.title, book_path(book)</li> %>
+<%# <% end %> 
+<%# <div class="index-card">
+  <img src="./app/assets/images/book_cover" alt="Book Cover" style="width:100">
+    <div class="container">
+      <h4><strong>Title</strong></h4>
+    </div>
+</div> %>
+<div class="card-trip">
+  <img src="app/assets/images/book_cover.png" />
+  <div class="card-trip-infos">
+    <div>
+      <h2>Book</h2>
+      <p>Author</p>
+    </div>
+    <p class="card-trip-pricing">£99.99 pernight</p>
+
+  </div>
+</div>
