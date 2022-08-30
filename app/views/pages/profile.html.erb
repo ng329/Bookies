@@ -1,0 +1,11 @@
+<h1>my profile</h1>
+
+<h3>my listed books</h3>
+<% @user.books.each do |book| %>
+    <li> <%= book.title %> </li>
+<% end %>
+
+<h3>my bookings</h3>
+<%= @user.bookings.each do |booking| %>
+  <%= booking.total_price %>
+<% end %>

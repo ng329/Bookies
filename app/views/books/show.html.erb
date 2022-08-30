@@ -1,1 +1,11 @@
 <%= @book.title %>
+<%= @book.price_per_day %>
+
+
+
+<h1>New booking</h1>
+<%= simple_form_for [@book, @booking] do |f| %>
+  <%= f.input :rental_start %>
+  <%= f.input :rental_end %>
+  <%= f.submit "Book the book", class: "btn btn-primary" %>
+<% end %>
