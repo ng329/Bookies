@@ -1,0 +1,54 @@
+
+<% if @book.user != current_user  %>
+  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">
+    New booking
+  </button>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">New Booking</h4>
+          <h6>Price per day: <%= number_to_currency(@book.price_per_day, unit: '£') %></h6>
+        </div>
+        <div class="modal-body">
+          <%= simple_form_for [@book, @booking] do |f| %>
+            <%= f.input :rental_start %>
+            <%= f.input :rental_end %>
+            <%= f.submit "Book the book", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% else %>
+<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">
+    Edit Book
+  </button>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Edit book details</h4>
+        </div>
+        <div class="modal-body">
+         <%= render "edit", book: @book %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ <%= link_to "Delete",
+  book_path(@book),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn"
+  %>
+<% end %>

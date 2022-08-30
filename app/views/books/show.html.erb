@@ -1,11 +1,20 @@
-<%= @book.title %>
-<%= @book.price_per_day %>
+<div class="container show-page">
 
+  <div class="img-button">
+  <%= cl_image_tag @book.photo.key, height: 450, width: 300, crop: :fill %>
+  <%= render "button", book: @book %>
+  </div>
 
-
-<h1>New booking</h1>
-<%= simple_form_for [@book, @booking] do |f| %>
-  <%= f.input :rental_start %>
-  <%= f.input :rental_end %>
-  <%= f.submit "Book the book", class: "btn btn-primary" %>
-<% end %>
+  <div class="text">
+    <div class="title">
+      <h1><%= @book.title %></h1>
+    </div>
+    <div class="author-genre">
+      <h4><%= @book.author %></h4>
+      <h5><%= @book.genre %></h5>
+    </div>
+    <div class="description">
+      <h6><%= @book.blurb %></h6>
+    </div>
+  </div>
+</div>

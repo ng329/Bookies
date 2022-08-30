@@ -1,0 +1,33 @@
+.show-page {
+  display: flex;
+  margin: 20px;
+  padding:10px;
+}
+.img-button {
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin-left: 50px;
+  flex: 1 0 auto;
+}
+
+.author-genre {
+  display: flex;
+  // justify-content: space-between;
+  padding-top:15px;
+  align-items: flex-end;
+  margin-top:10px;
+}
+.author-genre h5 {
+  margin-left: 40px;
+}
+
+.description {
+  padding-top:15px;
+  margin-top:20px;
+}
