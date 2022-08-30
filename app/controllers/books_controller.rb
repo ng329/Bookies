@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: %i[show destroy edit update]
+  before_action :set_book, only: %i[show destroy update]
 
   def index
     @books = Book.all
@@ -26,9 +26,6 @@ class BooksController < ApplicationController
 
   def destroy
     @book.destroy
-  end
-
-  def edit
   end
 
   def update
