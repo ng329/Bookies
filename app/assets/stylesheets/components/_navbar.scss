@@ -1,12 +1,25 @@
-.navbar {
+.navbar-bookies {
   justify-content: space-between;
   background: white;
 }
 
-.navbar .navbar-collapse {
+.navbar-bookies .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar .navbar-brand img {
-  width: 40px;
+.navbar-bookies .navbar-brand {
+  padding-left: 40px;
+}
+
+.container-fluid {
+  padding: 0px;
+}
+
+.nav-item {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.dropdown {
+  padding-right: 40px;
 }
