@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  font-family: Hack, monospace;
+  background-color: #EAE1D2;
+}
+
+h1 {
+  font-family: hack;
+  opacity: .7;
+  // font-size: 125px; on home page
+}
+
+p {
+  opacity: .65;
+}
+
+#title {
+  font-size: 125px;
+}
