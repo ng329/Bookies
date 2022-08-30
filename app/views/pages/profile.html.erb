@@ -1,6 +1,10 @@
 <h1>my profile</h1>
 
 <h3>my listed books</h3>
+
+<%= cl_image_tag @user.photo.key,
+      width: 400, height: 300, crop: :fill %>
+
 <% @user.books.each do |book| %>
     <li> <%= book.title %> </li>
 <% end %>
