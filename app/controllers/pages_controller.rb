@@ -4,6 +4,12 @@ class PagesController < ApplicationController
 
   def profile
     @user = current_user
-
+    @my_posts = []
+    @user.books.each do |book|
+      book.bookings.each do |booking|
+        @my_posts << booking
+      end
+    end
+    @my_rentals = @user.bookings
   end
 end
