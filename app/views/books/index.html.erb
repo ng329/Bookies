@@ -7,19 +7,17 @@
       <h4><strong>Title</strong></h4>
     </div>
 </div> %>
-<div class="card-book">
-  <img src="../../assets/images/book_cover.png" />
-  <div class="card-book-infos">
-      <h2>Book</h2>
-    <div class="card-bottom">
-      <p>Author</p>
-      <p class="card-book-pricing">£99.99 pernight</p>
-    </div>
-
-  </div>
-</div>
-
-
 <% @books.each do |book| %>
+  <div class="card-book">
+<%= cl_image_tag book.photo.key, height: 300, width: 400, crop: :fill %>
+    <div class="card-book-infos">
+        <h2><%= book.title %></h2>
+      <div class="card-bottom">
+        <p><%= book.author %></p>
+        <p class="card-book-pricing"><%= number_to_currency(book.price_per_day, unit: "£") %></p>
+      </div>
+    </div>
+  </div>
   
 <% end %>
+

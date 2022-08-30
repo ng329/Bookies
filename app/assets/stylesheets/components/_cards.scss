@@ -1,22 +1,8 @@
-// Index cards
-
-// .card {
-//   box-shadow: 0 4px 8px 0 rgba($color: #000000, $alpha: .2);
-//   transition: 0.3s;
-  // background-image: url(./app/assets/images/book_cover.jpeg);
-// }
-
-// .card:hover {
-//   box-shadow: 0 8px 16px 0 rgba($color: #000000, $alpha: .2)
-// }
-
-// .container {
-//   padding: 2px 16px;
-// }
 .card-book {
   overflow: hidden;
-  background: pink;
+  background: #f0ebe3;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: solid rgba($color: #000000, $alpha: .2);
 }
 
 .card-book > img {
@@ -56,7 +42,7 @@
   right: 16px;
   top: -20px;
   width: 40px;
-  background-color: pink;
+  background-color: #f0ebe3;
 }
 
 .card-bottom {
