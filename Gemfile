@@ -78,3 +78,9 @@ end
 
 # devise- user gem
 gem "devise"
+
+# cloudinary - secret keys
+# gem "dotenv-rails", groups: [:development, :test]
+
+# cloudinary gem
+gem "cloudinary"
