@@ -10,8 +10,8 @@ require "open-uri"
 require 'json'
 require 'rest-client'
 
-Book.destroy_all
 User.destroy_all
+Book.destroy_all
 
 puts "creating users"
 user1 = User.new(
@@ -58,7 +58,7 @@ puts "creating books"
   file = URI.open("https://source.unsplash.com/random/?book,cover")
 
   title = Faker::Book.title
-  blurb = Faker::Books::Dune.quote
+  blurb = "#{Faker::Lorem.paragraph} #{Faker::Lorem.paragraph} #{Faker::Lorem.paragraph} #{Faker::Lorem.paragraph} #{Faker::Lorem.paragraph}#{Faker::Lorem.paragraph} #{Faker::Lorem.paragraph} #{Faker::Lorem.paragraph}"
   author = Faker::Book.author
   genre = Faker::Book.genre
   address = Faker::Address.full_address
