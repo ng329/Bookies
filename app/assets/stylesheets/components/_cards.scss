@@ -13,43 +13,53 @@
 // .container {
 //   padding: 2px 16px;
 // }
-.card-trip {
+.card-book {
   overflow: hidden;
   background: pink;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-trip > img {
+.card-book > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-.card-trip h2 {
-  font-size: 16px;
+.card-book h2 {
+  font-size: 20px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-trip p {
+.card-book p {
+  font-size: 16px;
+  opacity: .7;
+  margin: 0;
+}
+
+.card-book .card-book-pricing {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
 
-
-.card-trip .card-trip-infos {
+.card-book .card-book-infos {
   padding: 16px;
-  display: flex;
+  // display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
 }
 
-.card-trip-infos .card-trip-user {
+.card-book-infos .card-book-user {
   position: absolute;
   right: 16px;
   top: -20px;
   width: 40px;
   background-color: pink;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
 }
