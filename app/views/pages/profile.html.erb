@@ -1,24 +1,41 @@
 <%= render "shared/navbar" %>
 
-<h1>my profile</h1>
+<h1>My Profile</h1>
 
-<h3>my listed books</h3>
+<div class="container-page">
+  <div class="container-profile">
 
-<%= cl_image_tag @user.photo.key,
-      width: 400, height: 300, crop: :fill %>
+    <div class="books-button">
 
-<% @user.books.each do |book| %>
-    <li> <%= book.title %> </li>
-<% end %>
+      <h3>My Listed Books</h3>
+      <div class="books-profile">
+          <% @user.books.each do |book| %>
+              <div class="card-trip">
+                <%= cl_image_tag book.photo.key,
+                  width: 200, height: 300, crop: :fill %>
+                <div class="card-trip-infos">
+                  <h3> <%= book.title %> </h3>
+                </div>
+              </div>
+          <% end %>
+        </div>
+      <%= render  "books/button_new", book: @book %>
+    </div>
 
-<h3>My rentals</h3>
-<%= @my_rentals.each do |booking| %>
-  <%= booking.total_price %>
-<% end %>
 
+    <div class="profile">
+      <%= cl_image_tag @user.photo.key,
+          crop: :fill, class: "avatar" %>
 
-<h3>My listings</h3>
-<%= @my_posts.each do |booking| %>
-  <li><%= booking.book.title%></li>
-  <li><%= booking.status%></li>
-<% end %>
+      <div class="profile-info">
+        <h5><%= "#{@user.first_name} #{@user.last_name}" %></h5>
+        <p><%= @user.about %></p>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="rentals">
+    <%= render "books/bookings" %>
+  </div>
+</div>

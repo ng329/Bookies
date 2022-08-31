@@ -1,0 +1,19 @@
+<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">
+    New book
+  </button>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">New Book</h4>
+        </div>
+        <div class="modal-body">
+         <%= render "books/new_form", book: @book%>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
