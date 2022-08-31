@@ -1,6 +1,7 @@
 .navbar-bookies {
   justify-content: space-between;
-  background: white;
+  background: #f0ebe3;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2)
 }
 
 .navbar-bookies .navbar-collapse {
@@ -9,6 +10,7 @@
 
 .navbar-bookies .navbar-brand {
   padding-left: 40px;
+  opacity: .75;
 }
 
 .container-fluid {
