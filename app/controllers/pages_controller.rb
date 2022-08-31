@@ -4,6 +4,7 @@ class PagesController < ApplicationController
 
   def profile
     @user = current_user
+    @book = Book.new()
     @my_posts = []
     @user.books.each do |book|
       book.bookings.each do |booking|

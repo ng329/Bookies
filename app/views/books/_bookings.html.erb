@@ -1,0 +1,11 @@
+      <h3>My rentals</h3>
+      <%= @my_rentals.each do |booking| %>
+        <%= booking.total_price %>
+      <% end %>
+
+
+      <h3>My listings</h3>
+      <%= @my_posts.each do |booking| %>
+        <li><%= booking.book.title%></li>
+        <li><%= booking.status%></li>
+      <% end %>
