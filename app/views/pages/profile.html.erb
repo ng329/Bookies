@@ -9,14 +9,23 @@
 
       <h3>My Listed Books</h3>
       <div class="books-profile">
+          <%# <% @user.books.each do |book| %>
+              <%# <div class="card-book"> %>
+                <%# <%= cl_image_tag book.photo.key, %>
+                  <%# width: 200, height: 300, crop: :fill %> 
+                <%# <div class="card-book-infos"> %>
+                  <%# <h3> <%= book.title </h3> %>
+                <%# </div> %>
+              <%# </div> %>
+          <%# <% end %>
           <% @user.books.each do |book| %>
-              <div class="card-trip">
-                <%= cl_image_tag book.photo.key,
-                  width: 200, height: 300, crop: :fill %>
-                <div class="card-trip-infos">
-                  <h3> <%= book.title %> </h3>
-                </div>
+            <div class="card-book-profile">
+              <%= cl_image_tag book.photo.key, height: 450, width: 300, crop: :fill %>
+              <div class="card-book-infos">
+                <h2><%= book.title %></h2> 
+
               </div>
+            </div>
           <% end %>
         </div>
       <%= render  "books/button_new", book: @book %>
