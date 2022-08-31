@@ -16,16 +16,18 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-    @book.user = current_user
+    @user = current_user
+    @book.user = @user
     if @book.save
       redirect_to book_path(@book)
     else
-      render :new, status: :unprocessable_entity
+      render "pages/profile", status: :unprocessable_entity
     end
   end
 
   def destroy
     @book.destroy
+    redirect_to books_path, status: :see_other
   end
 
   def update
