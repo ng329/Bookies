@@ -1,5 +1,6 @@
 .tab-content {
-  margin: 20px;
+  border-radius: 4px 4;
+  background-color: white;
 }
 
 .booking-info {
@@ -8,4 +9,6 @@
 
 .nav-link {
   text-decoration: none;
+  color: black;
+  opacity: .65;
 }
