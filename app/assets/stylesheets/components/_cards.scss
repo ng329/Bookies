@@ -1,3 +1,5 @@
+// <----- Card Index ----->
+
 .card-book {
   // flex: 1 1 auto;
   // overflow: hidden;
@@ -85,5 +87,87 @@
 @media (min-width: 1200px) {
   .box-container {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// <------ Card Profile ------>
+
+.card-book-profile {
+  flex: 1 1 auto;
+  width: 150px;
+  // overflow: hidden;
+  background: #f0ebe3;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // padding: 5px;
+  // margin: 20px;
+  // margin-left: 30px;
+}
+
+.card-book-profile > img {
+  height: 225px;
+  width: 150px;
+  object-fit: cover;
+  // margin-bottom: 10px;
+  padding: 10px;
+}
+
+.card-book-profile h2 {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+  overflow: auto;
+}
+
+.card-book-profile .card-book-infos {
+  padding: 5px;
+  // display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-book-infos .card-book-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+  background-color: #f0ebe3;
+}
+
+.card-bottom {
+  // display: flex;
+  justify-content: space-between;
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  // background-color: pink;
+  // padding: 30px;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .box-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .box-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .box-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
