@@ -1,1 +1,11 @@
 // Specific CSS for your home-page
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  font-family: Hack, monospace;
+  background-color: #EAE1D2;
+}
