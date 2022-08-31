@@ -8,12 +8,11 @@
   flex-direction: column;
 }
 
-.text {
+.info {
   display: flex;
   flex-direction: column;
   margin: 10px;
   margin-left: 50px;
-  flex: 1 0 auto;
 }
 
 .author-genre {
@@ -30,4 +29,5 @@
 .description {
   padding-top:15px;
   margin-top:20px;
+  word-wrap: break-word
 }
