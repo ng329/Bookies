@@ -107,7 +107,7 @@ book3.save
 # book 4
 user = User.all.sample
 price = Faker::Number.between(from: 0.0, to: 1.0).round(2)
-file = URI.open("https://images-eu.bookshop.org/images/9781904233657.jpg?height=500&v=v4-019454674ff5821d58ddf0802bbfa3bb")
+file = URI.open("https://images-na.ssl-images-amazon.com/images/I/71OwIzPjs7L.jpg")
 
 book4 = Book.new(
   title: "Twilight",
@@ -328,7 +328,7 @@ book16.save
 # book 17
 user = User.all.sample
 price = Faker::Number.between(from: 0.0, to: 1.0).round(2)
-file = URI.open("https://images-us.bookshop.org/ingram/9780394820378.jpg?height=500&v=v2")
+file = URI.open("https://images-na.ssl-images-amazon.com/images/I/51QC8X+TDyL._SX340_BO1,204,203,200_.jpg")
 
 book17 = Book.new(
   title: "Phantom Tollbooth",
@@ -362,7 +362,7 @@ book18.save
 # book 19
 user = User.all.sample
 price = Faker::Number.between(from: 0.0, to: 1.0).round(2)
-file = URI.open("https://images-us.bookshop.org/ingram/9781635577020.jpg?height=500&v=v2")
+file = URI.open("https://images-na.ssl-images-amazon.com/images/I/91tFtUf+0ZL.jpg")
 
 book19 = Book.new(
   title: "House of Earth and Blood",
