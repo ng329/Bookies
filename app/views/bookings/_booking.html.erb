@@ -1,0 +1,9 @@
+<div class="card-product">
+  <%= cl_image_tag booking.book.photo.key, crop: :fill %>
+  <div class="card-product-infos">
+    <h5><%= booking.book.title %></h5>
+    <p>Rental start date: <%= booking.rental_start %></p>
+    <p>Rental length: <%= (booking.rental_end - booking.rental_start).to_i %></p>
+    <p>Total price: <%= number_to_currency(booking.total_price, unit: "£") %></p>
+  </div>
+</div>

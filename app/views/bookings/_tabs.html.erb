@@ -1,0 +1,105 @@
+<%# booking tabs %>
+<div class="container-bookings">
+  <h4>Upcoming bookings:</h4>
+  <div class="tab-content" id="bookingTabContent">
+    <div class="tab-pane fade show active" id="bookings" role="tabpanel" aria-labelledby="bookings-tab">
+      <ul class="nav nav-tabs" id="bookingTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Pending</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Accepted</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Rejected</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tab-content clearfix" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <% @my_rentals.each do |booking| %>
+        <% if booking.status == "pending" %>
+          <div class="booking-info">
+            <%= render "bookings/booking", booking: booking %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <% @my_rentals.each do |booking| %>
+        <% if booking.status == "accepted" %>
+           <div class="booking-info">
+              <%= render "bookings/booking", booking: booking %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+      <% @my_rentals.each do |booking| %>
+        <% if booking.status == "rejected" %>
+          <div class="booking-info">
+            <%= render "bookings/booking", booking: booking %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+<%# rentals tabs %>
+<div class="container-bookings">
+  <h4>My Rentals:</h4>
+  <div class="tab-content" id="bookingTabContent">
+    <div class="tab-pane fade show active" id="rentals" role="tabpanel" aria-labelledby="rentals-tab">
+      <ul class="nav nav-tabs" id="bookingTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pending-tab" data-bs-toggle="tab" data-bs-target="#pending" type="button" role="tab" aria-controls="pending" aria-selected="true">Pending</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="accepted-tab" data-bs-toggle="tab" data-bs-target="#accepted" type="button" role="tab" aria-controls="accepted" aria-selected="false">Accepted</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="rejected-tab" data-bs-toggle="tab" data-bs-target="#rejected" type="button" role="tab" aria-controls="rejected" aria-selected="false">Rejected</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tab-content clearfix" id="myTabContent">
+    <div class="tab-pane fade show active" id="pending" role="tabpanel" aria-labelledby="pending-tab">
+       <% @my_posts.each do |rental| %>
+        <% if rental.status == "pending" %>
+          <div class="booking-info">
+            <%= render "bookings/rental", rental: rental %>
+            <div class="btn">
+              <%= link_to "Accept", change_booking_status_booking_path(rental, status: "accepted"), class:'btn' %>
+              <%= link_to "Reject",  change_booking_status_booking_path(rental, status: "rejected"), class:'btn' %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="tab-pane fade" id="accepted" role="tabpanel" aria-labelledby="accepted-tab">
+       <% @my_posts.each do |rental| %>
+        <% if rental.status == "accepted" %>
+          <div class="booking-info">
+            <%= render "bookings/rental", rental: rental %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="tab-pane fade" id="rejected" role="tabpanel" aria-labelledby="rejected-tab">
+      <% @my_posts.each do |rental| %>
+        <% if rental.status == "rejected" %>
+          <div class="booking-info">
+            <%= render "bookings/rental", rental: rental %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

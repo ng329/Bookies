@@ -14,13 +14,16 @@ class BookingsController < ApplicationController
     end
   end
 
-  # def change_booking_status
-  #   if params[:button] == "pending"
-  #     @booking.status = "accepted"
-  #   else
-  #     @booking.status = "rejected"
-  #   end
-  # end
+  def change_booking_status
+    booking = Booking.find(params[:id])
+    if params[:status] == "accepted"
+      booking.status = "accepted"
+    else
+      booking.status = "rejected"
+    end
+    booking.save
+    redirect_to "/profile"
+  end
 
   private
 

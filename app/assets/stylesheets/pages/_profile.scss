@@ -1,7 +1,6 @@
 // to move/edit:
 .card-trip {
   overflow: hidden;
-  background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
@@ -52,6 +51,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 16px;
+    margin-right: 20px;
 }
 
 .container-page {
@@ -61,7 +61,7 @@
 }
 
 .container-page .rentals {
-  margin: 15px;
+  margin-left: 15px;
 }
 
 .profile-info {
