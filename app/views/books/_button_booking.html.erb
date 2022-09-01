@@ -13,8 +13,8 @@
         </div>
         <div class="modal-body">
           <%= simple_form_for [@book, @booking] do |f| %>
-            <%= f.input :rental_start %>
-            <%= f.input :rental_end %>
+            <%= f.input :rental_start, as: :date, html5: true %>
+            <%= f.input :rental_end, as: :date, html5: true %>
             <%= f.submit "Book the book", class: "btn btn-primary" %>
           <% end %>
         </div>
