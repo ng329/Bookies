@@ -8,18 +8,22 @@
     <%= f.input :first_name,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "first name" }%>
+                input_html: { autocomplete: "Bob" }%>
     <%= f.input :last_name,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "last name" }%>
+                input_html: { autocomplete: "Smith" }%>
+    <%= f.input :address,
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "15 Cresent Lane" }%>
     <%= f.input :photo, as: :file,
                 required: false,
                 autofocus: true %>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "email" }%>
+                input_html: { autocomplete: "b.smith@gmail.com" }%>
     <%= f.input :about,
                 required: true,
                 autofocus: true,

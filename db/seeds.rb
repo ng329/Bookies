@@ -18,6 +18,7 @@ user1 = User.new(
   first_name: "George",
   last_name: "Smith",
   email: "g.smith@gmail.com",
+  address: "The Riverside Apartment, Anchor Brewhouse, 50 Shad Thames, London, SE1",
   password: "password",
   password_confirmation: "password",
   about: "Books are the best escape"
@@ -30,6 +31,7 @@ user2 = User.new(
   first_name: "Tim",
   last_name: "Kono",
   email: "t.kono@gmail.com",
+  address: "Brook Street, London, W1K",
   password: "password",
   password_confirmation: "password",
   about: "Murder mysteries are my favourite"
@@ -42,6 +44,7 @@ user3 = User.new(
   first_name: "Becky",
   last_name: "Fisher",
   email: "b.fisher@gmail.com",
+  address: "Hamilton Terrace, St Johns Wood, London, NW8",
   password: "password",
   password_confirmation: "password",
   about: "Love a good romance"
