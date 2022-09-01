@@ -70,11 +70,12 @@
   color: black;
   // opacity: .7;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
 }
 
 .btn:hover {
-  background-color: #EAE1D2;
-  border: solid rgba($color: #000000, $alpha: .5);
+  background-color: hwb(36 96% 0%);
+  border: solid rgba($color: #ffffffe0, $alpha: .5);
 }
 
 
@@ -95,4 +96,12 @@
 
 .btn-book-profile:hover {
   border: none;
+}
+
+.btn-search {
+  background-color: #EAE1D2;
+  border-radius: 0px, 50px, 50px, 0px;
+  border: black;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+  opacity: .7;
 }
