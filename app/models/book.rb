@@ -12,10 +12,9 @@ class Book < ApplicationRecord
                             }
 
   include PgSearch::Model
-  pg_search_scope :search,
+  pg_search_scope :search_book,
                   against: %i[title author genre],
                   using: {
-                    search: { prefix: true }
+                    tsearch: { prefix: true }
                   }
-
 end
