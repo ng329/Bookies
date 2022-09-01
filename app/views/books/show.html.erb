@@ -4,7 +4,7 @@
 
   <div class="img-button">
   <%= cl_image_tag @book.photo.key, height: 450, width: 300, crop: :fill %>
-  <%= render "button", book: @book %>
+  <%= render "books/button", book: @book %>
   </div>
 
   <div class="info">
