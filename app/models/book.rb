@@ -10,4 +10,11 @@ class Book < ApplicationRecord
                             format: {
                               with: /\A\d(\.\d{1,2})+\z/
                             }
+
+  include PgSearch::Model
+  pg_search_scope :search_book,
+                  against: %i[title author genre],
+                  using: {
+                    tsearch: { prefix: true }
+                  }
 end

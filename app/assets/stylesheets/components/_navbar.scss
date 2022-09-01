@@ -25,3 +25,13 @@
 .dropdown {
   padding-right: 40px;
 }
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-form {
+  padding: 3px;
+  width: 40%;
+}
