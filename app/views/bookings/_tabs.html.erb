@@ -75,9 +75,13 @@
         <% if rental.status == "pending" %>
           <div class="booking-info">
             <%= render "bookings/rental", rental: rental %>
-            <div class="btn">
-              <%= link_to "Accept", change_booking_status_booking_path(rental, status: "accepted"), class:'btn' %>
-              <%= link_to "Reject",  change_booking_status_booking_path(rental, status: "rejected"), class:'btn' %>
+            <div class="accept-btn">
+              <%= link_to change_booking_status_booking_path(rental, status: "accepted"), class:'btn' do %>
+                <%= icon('fa-solid', 'check')%>
+              <% end %>
+              <%= link_to change_booking_status_booking_path(rental, status: "rejected"), class:'btn' do %>
+               <i class="fa-solid fa-x"></i>
+              <% end %>
             </div>
           </div>
         <% end %>

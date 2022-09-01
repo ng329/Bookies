@@ -5,13 +5,22 @@
 
 .booking-info {
   padding: 15px;
+  display: flex;
   // border: 0.5px solid rgba($color: #000000, $alpha: 0.7)
+}
+.accept-btn {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color:#fff ;
+  padding-right: 10px;
 }
 
 .nav-link {
   text-decoration: none;
   color: black;
-  opacity: .65;
+  // opacity: .65;
 }
 
 .container-bookings {
@@ -27,6 +36,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  flex-grow: 1;
 }
 
 .card-product img {
