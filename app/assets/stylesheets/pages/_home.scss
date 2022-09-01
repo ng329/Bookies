@@ -1,11 +1,41 @@
 // Specific CSS for your home-page
-.home-container {
+.banner-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   font-family: Hack, monospace;
   background-color: #EAE1D2;
+  
+}
+#more-info-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#more-info-container img {
+  width: 400px;
+  height: 400px;
+  opacity: .7;
+  margin: 50px;
+  
+}
+
+.home-text {
+  padding: 50px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 40px;
+  width: 60%;
+  background: #f0ebe3;
+  height: 90%;
+}
+
+.home-text h2{
+  font-size: 20px;
+}
+
+.footer-container {
+  height: 10%;
 }
