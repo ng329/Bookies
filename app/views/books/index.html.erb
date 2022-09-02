@@ -1,17 +1,17 @@
 <%= render "shared/navbar" %>
-  <div class="box-container">
-<% @books.each do |book| %>
-    <div class="card-book">
-      <%= link_to book_path(book), { class: "btn" } do %>
-        <%= cl_image_tag book.photo.key, height: 450, width: 300, crop: :fill %>
-        <div class="card-book-infos">
-            <h2><%= book.title %></h2>
-          <div class="card-bottom">
-              <p><%= book.author %></p>
-              <p class="card-book-pricing"><%= number_to_currency(book.price_per_day, unit: "£") %></p>
+<div class="box-container">
+  <% @books.each do |book| %>
+      <div class="card-book">
+        <%= link_to book_path(book), { class: "btn" } do %>
+          <%= cl_image_tag book.photo.key, height: 450, width: 300, crop: :fill %>
+          <div class="card-book-infos">
+              <h2><%= book.title %></h2>
+            <div class="card-bottom">
+                <p><%= book.author %></p>
+                <p class="card-book-pricing"><%= number_to_currency(book.price_per_day, unit: "£") %></p>
+            </div>
           </div>
-        </div>
-      <% end %>
-    </div>
-<% end %>
-  </div>
+        <% end %>
+      </div>
+  <% end %>
+</div>
