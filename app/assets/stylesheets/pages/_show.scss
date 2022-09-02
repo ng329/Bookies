@@ -31,3 +31,57 @@
   margin-top:20px;
   word-wrap: break-word
 }
+
+.text-recomendations {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+
+
+.card-book-recommended {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1 1 auto;
+  align-items: flex-end;
+  padding: 10px;
+
+
+  // background: #f0ebe3;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // padding: 5px;
+  // margin-left: 30px;
+}
+
+.card-book-recommended > img {
+  height: 225px;
+  width: 150px;
+  object-fit: cover;
+  // margin-bottom: 10px;
+  padding: 10px;
+}
+
+.owner-text-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.owner-info {
+  display: flex;
+  // justify-content: space-around;
+  flex-direction: column;
+}
+
+.all-recomendations {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  margin: 20px;
+  margin-left: 50px;
+}
