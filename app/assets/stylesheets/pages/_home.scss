@@ -8,11 +8,12 @@
   height: 100vh;
   font-family: Hack, monospace;
   background-color: #EAE1D2;
-  
+
 }
 #more-info-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 #more-info-container img {
@@ -20,16 +21,19 @@
   height: 400px;
   opacity: .7;
   margin: 50px;
-  
+  margin-top: 15px;
+
 }
 
 .home-text {
   padding: 50px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 40px;
+  margin-bottom: 10px;
   width: 60%;
   background: #f0ebe3;
   height: 90%;
+  flex: 1 0 auto;
 }
 
 .home-text h2{
