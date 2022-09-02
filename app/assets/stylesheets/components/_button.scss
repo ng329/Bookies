@@ -89,17 +89,12 @@
 
 // <----- btn ----->
 .btn {
-  background-color: #f0ebe3;
+  // background-color: #f0ebe3;
   border: solid rgba(0,0,0,0.3);
   color: black;
   // opacity: .7;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
-}
-
-.btn:hover {
-  background-color: hwb(36 96% 0%);
-  border: solid rgba($color: #ffffffe0, $alpha: .5);
 }
 
 
@@ -118,9 +113,7 @@
   box-shadow: none;
 }
 
-.btn-book-profile:hover {
-  border: none;
-}
+
 
 .btn-search {
   background-color: #EAE1D2;
@@ -142,4 +135,13 @@
   height: 72px;
   width: 200px;
   font-size: larger;
+}
+
+.btn-new-booking:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.but:hover {
+    background-color: hwb(36 96% 0%);
+  border: solid rgba($color: #ffffffe0, $alpha: .5);
 }
