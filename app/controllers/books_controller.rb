@@ -11,6 +11,9 @@ class BooksController < ApplicationController
 
   def show
     @booking = Booking.new
+    all_recommended = Book.search_genre(@book.genre)
+    @recommended = []
+    all_recommended.each { |book| @recommended << book unless book == @book }
   end
 
   def new

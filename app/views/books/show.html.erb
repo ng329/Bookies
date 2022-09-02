@@ -7,16 +7,41 @@
   <%= render "books/button_booking", book: @book %>
   </div>
 
-  <div class="info">
-    <div class="title">
-      <h1><%= @book.title %></h1>
+  <div class= "text-recomendations">
+    <div class="info">
+      <div class="owner-text-box">
+        <div class="title-author-info">
+          <div class="title">
+            <h1><%= @book.title %></h1>
+          </div>
+          <div class="author-genre">
+            <h4><%= @book.author %></h4>
+            <h5><%= @book.genre %></h5>
+          </div>
+        </div>
+        <div class="owner-info">
+          <p><%= "#{@book.user.first_name} #{@book.user.last_name}" %></p>
+          <p><%=@book.user.email  %></p>
+        </div>
+      </div>
+      <div class="description">
+        <h6><%= @book.blurb %></h6>
+      </div>
     </div>
-    <div class="author-genre">
-      <h4><%= @book.author %></h4>
-      <h5><%= @book.genre %></h5>
-    </div>
-    <div class="description">
-      <h6><%= @book.blurb %></h6>
+    <div class="all-recomendations">
+      <h5><%= "Recomended:" unless @recommended.empty? %></h5>
+      <div class="card-book-recommended">
+        <% @recommended.first(4).each do |book| %>
+          <%= link_to book_path(book), { class: "btn btn-book-profile" } do %>
+            <div class="card-book-profile">
+              <%= cl_image_tag book.photo.key, height: 450, width: 300, crop: :fill %>
+              <div class="card-book-infos">
+                <h2><%= book.title %></h2>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

@@ -17,4 +17,9 @@ class Book < ApplicationRecord
                   using: {
                     tsearch: { prefix: true }
                   }
+  pg_search_scope :search_genre,
+                  against: %i[genre],
+                  using: {
+                    tsearch: { any_word: true }
+                  }
 end
