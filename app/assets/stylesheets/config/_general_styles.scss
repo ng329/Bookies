@@ -37,3 +37,18 @@ h3 {
   opacity: .55;
   text-align: center;
 }
+
+h4 {
+  font-family: hack;
+  opacity: .7;
+}
+
+h5 {
+  font-family: hack;
+  opacity: .7;
+}
+
+.all-recomendations > h5 {
+  font-weight: bold;
+  margin-left: 30px;
+}
