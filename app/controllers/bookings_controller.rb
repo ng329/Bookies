@@ -7,6 +7,9 @@ class BookingsController < ApplicationController
     @booking.total_price = calculate_total_price(@booking)
     # add current user as renter
     @booking.user = current_user
+    all_recommended = Book.search_genre(@book.genre)
+    @recommended = []
+    all_recommended.each { |book| @recommended << book unless book == @book }
     if @booking.save
       redirect_to "/profile"
     else
@@ -35,5 +38,8 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:rental_start, :rental_end)
+  end
+
+  def recommended
   end
 end
