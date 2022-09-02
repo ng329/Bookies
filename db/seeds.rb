@@ -18,6 +18,7 @@ user1 = User.new(
   first_name: "George",
   last_name: "Smith",
   email: "g.smith@gmail.com",
+  address: "The Riverside Apartment, Anchor Brewhouse, 50 Shad Thames, London, SE1",
   password: "password",
   password_confirmation: "password",
   about: "Books are the best escape"
@@ -30,6 +31,7 @@ user2 = User.new(
   first_name: "Tim",
   last_name: "Kono",
   email: "t.kono@gmail.com",
+  address: "Brook Street, London, W1K",
   password: "password",
   password_confirmation: "password",
   about: "Murder mysteries are my favourite"
@@ -42,6 +44,7 @@ user3 = User.new(
   first_name: "Becky",
   last_name: "Fisher",
   email: "b.fisher@gmail.com",
+  address: "Hamilton Terrace, St Johns Wood, London, NW8",
   password: "password",
   password_confirmation: "password",
   about: "Love a good romance"
@@ -96,7 +99,7 @@ book3 = Book.new(
   title: "The Da Vinci Code",
   blurb:"The Da Vinci Code follows 'symbologist' Robert Langdon and cryptologist Sophie Neveu after a murder in the Louvre Museum in Paris causes them to become involved in a battle between the Priory of Sion and Opus Dei over the possibility of Jesus Christ and Mary Magdalene having had a child together.",
   author: "Dan Brown",
-  genre: "hriller",
+  genre: "Thriller",
   price_per_day: price
 )
 book3.photo.attach(io: file, filename: "book-cover.jpg", content_type: "image/jpeg")
@@ -107,7 +110,7 @@ book3.save
 # book 4
 user = User.all.sample
 price = Faker::Number.between(from: 0.0, to: 1.0).round(2)
-file = URI.open("https://images-eu.bookshop.org/images/9781904233657.jpg?height=500&v=v4-019454674ff5821d58ddf0802bbfa3bb")
+file = URI.open("https://images-na.ssl-images-amazon.com/images/I/71OwIzPjs7L.jpg")
 
 book4 = Book.new(
   title: "Twilight",
@@ -328,7 +331,7 @@ book16.save
 # book 17
 user = User.all.sample
 price = Faker::Number.between(from: 0.0, to: 1.0).round(2)
-file = URI.open("https://images-us.bookshop.org/ingram/9780394820378.jpg?height=500&v=v2")
+file = URI.open("https://images-na.ssl-images-amazon.com/images/I/51QC8X+TDyL._SX340_BO1,204,203,200_.jpg")
 
 book17 = Book.new(
   title: "Phantom Tollbooth",
@@ -362,7 +365,7 @@ book18.save
 # book 19
 user = User.all.sample
 price = Faker::Number.between(from: 0.0, to: 1.0).round(2)
-file = URI.open("https://images-us.bookshop.org/ingram/9781635577020.jpg?height=500&v=v2")
+file = URI.open("https://images-na.ssl-images-amazon.com/images/I/91tFtUf+0ZL.jpg")
 
 book19 = Book.new(
   title: "House of Earth and Blood",

@@ -5,9 +5,8 @@ class BooksController < ApplicationController
     if params[:query].present?
       @books = Book.search_book(params[:query])
     else
-      @books = Book.all
+      @books = user_signed_in? ? Book.where.not(user_id: current_user) : Book.all
     end
-    # @books = Book.where(location: 5)
   end
 
   def show
