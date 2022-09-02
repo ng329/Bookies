@@ -82,7 +82,7 @@ book2 = Book.new(
   title: "Where the crawdads sing",
   blurb:"For years, rumors of the 'Marsh Girl' have haunted Barkley Cove, a quiet town on the North Carolina coast. She's barefoot and wild; unfit for polite society. So in late 1969, when handsome Chase Andrews is found dead, the locals immediately suspect Kya Clark. But Kya is not what they say. Abandoned at age ten, she has survived on her own in the marsh that she calls home. A born naturalist with just one day of school, she takes life lessons from the land, learning from the false signals of fireflies the real way of this world. But while she could have lived in solitude forever, the time comes when she yearns to be touched and loved. Drawn to two young men from town, who are each intrigued by her wild beauty, Kya opens herself to a new and startling world--until the unthinkable happens. In Where the Crawdads Sing, Owens juxtaposes an exquisite ode to the natural world against a heartbreaking coming of age story and a surprising murder investigation.",
   author: "Delia Owens",
-  genre: "Mystery/Coming of Age",
+  genre: "Mystery / Coming of Age",
   price_per_day: price
 )
 book2.photo.attach(io: file, filename: "book-cover.jpg", content_type: "image/jpeg")
@@ -116,7 +116,7 @@ book4 = Book.new(
   title: "Twilight",
   blurb:"Bella Swan and Edward Cullen, a pair of star-crossed lovers whose forbidden relationship ripens against the backdrop of small-town suspicion and a mysterious coven of vampires.",
   author: "Stephenie Meyer",
-  genre: "Fantasy/Romance",
+  genre: "Fantasy / Romance",
   price_per_day: price
 )
 book4.photo.attach(io: file, filename: "book-cover.jpg", content_type: "image/jpeg")
@@ -167,7 +167,7 @@ book7 = Book.new(
   title: "The 48 laws of power",
   blurb:"Amoral, cunning, ruthless, and instructive, this piercing work distills three thousand years of the history of power in to forty-eight well explicated laws. As attention--grabbing in its design as it is in its content, this bold volume outlines the laws of power in their unvarnished essence, synthesizing the philosophies of Machiavelli, Sun-tzu, Carl von Clausewitz, and other great thinkers. Some laws teach the need for prudence ('Law 1: Never Outshine the Master'), the virtue of stealth ('Law 3: Conceal Your Intentions'), and many demand the total absence of mercy ('Law 15: Crush Your Enemy Totally'), but like it or not, all have applications in real life. Illustrated through the tactics of Queen Elizabeth I, Henry Kissinger, P. T. Barnum, and other famous figures who have wielded--or been victimized by--power, these laws will fascinate any reader interested in gaining, observing, or defending against ultimate control.",
   author: "Robert Greene",
-  genre: "Non-Fiction",
+  genre: "Self-Help",
   price_per_day: price
 )
 book7.photo.attach(io: file, filename: "book-cover.jpg", content_type: "image/jpeg")
@@ -320,7 +320,7 @@ book16 = Book.new(
   title: "The City of Ember",
   blurb:"The city of Ember was built as a last refuge for the human race. Two hundred years later, the great lamps that light the city are beginning to flicker. When Lina finds part of an ancient message, she's sure it holds a secret that will save the city. She and her friend Doon must decipher the message before the lights go out on Ember forever! This stunning debut novel offers refreshingly clear writing and fascinating, original characters",
   author: "Jeanne DuPrau",
-  genre: "Children's/Science Fiction",
+  genre: "Children's / Science Fiction",
   price_per_day: price
 )
 book16.photo.attach(io: file, filename: "book-cover.jpg", content_type: "image/jpeg")
@@ -354,7 +354,7 @@ book18 = Book.new(
   title: "The Same Breath",
   blurb:"Teancum Leon, who goes by Tean, is a wildlife veterinarian. His life has settled into a holding pattern: he loves his job, he hates first dates, and he only occasionally has to deal with his neighbor Mrs. Wish's cat-related disasters.All of that changes, though, when a man appears in his office, asking for help to find his brother. Jem is convinced that something bad has happened to Benny, and he thinks Tean might be able to help. Tean isn't sure, but he's willing to try. ",
   author: "Gregory Ashe",
-  genre: "Mystery/Romance",
+  genre: "Mystery / Romance",
   price_per_day: price
 )
 book18.photo.attach(io: file, filename: "book-cover.jpg", content_type: "image/jpeg")
